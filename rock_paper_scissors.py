@@ -12,18 +12,7 @@ class flow_writing:
 
         if char in ".!?":
             time.sleep(0.5) 
-        print(' ')
-
-
-text = 'Hello my friend ...'
-introduction = flow_writing(text)
-
-text = 'Long it has been ...'
-main = flow_writing(text)
-
-text = 'Have a nice day ...'
-ending = flow_writing(text)
-
+        print(' ') # adding a new row
 
 # define maybe a class
 
