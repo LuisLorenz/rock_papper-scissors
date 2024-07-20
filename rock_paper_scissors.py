@@ -54,14 +54,14 @@ def game():
     if get_integer_input == 1:
         text_continue = 'Very nice!'
         flow_text_continue = flow_writing(text_continue)
-        
+
     elif get_integer_input == 2: 
         print('Okay :(')
         text_closing_program = '''
     Okay :( ...
     The game has been closed.\n'''
         flow_text_closing_program = flow_writing(text_closing_program)
-        exit()
+        exit() # does not work!!!
         # end this game
 
     # fix when the user does not input an int!
@@ -219,3 +219,5 @@ Make a choice:
 
 # initializing game 
 game()
+
+# want to play again? - input
