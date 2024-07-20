@@ -10,3 +10,16 @@ def get_integer_input(prompt="Bitte eine Ganzzahl eingeben: "):
             print("Ungültige Eingabe. Bitte eine Ganzzahl eingeben.")
 
 get_integer_input()
+
+# ... research the character of try and except
+    # when does the loop stops and when does it continue? 
+
+
+def get_integer_input(text):
+    while True:
+        user_input = input(text)
+        try:
+            user_input = int(user_input)
+            return user_input
+        except ValueError:
+            print("Your input was invalid please try again!")

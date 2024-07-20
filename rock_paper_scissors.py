@@ -32,12 +32,29 @@ class flow_writing_v2:
 
 def get_integer_input(text_int):
     while True:
-        user_input = input(text_int)
         try:
-            user_input = int(user_input)
-            return user_input
+            user_input = int(input(text_int))
+
+            if user_input == 1:
+                return False
+                text_continue = 'Very nice!'
+                flow_text_continue = flow_writing(text_continue)
+            
+            elif user_input == 2: 
+                # return False
+                text_closing_program = '''
+Okay :( ...
+The game has been closed.\n'''
+                flow_text_closing_program = flow_writing(text_closing_program)
+                sys.exit()
+
+            else:
+                print('Your input was invalid. Please try again')
+            
         except ValueError:
             print("Your input was invalid please try again!")
+# this shows me that it is possible to combine functions with each other
+
 
 def game(): 
 
@@ -50,21 +67,6 @@ def game():
     # flow_text_question = flow_writing(test_question)
 
     get_integer_input(test_int)
-
-    if get_integer_input == 1:
-        text_continue = 'Very nice!'
-        flow_text_continue = flow_writing(text_continue)
-
-    elif get_integer_input == 2: 
-        print('Okay :(')
-        text_closing_program = '''
-    Okay :( ...
-    The game has been closed.\n'''
-        flow_text_closing_program = flow_writing(text_closing_program)
-        exit() # does not work!!!
-        # end this game
-
-    # fix when the user does not input an int!
 
     text_starting ='''
 Here are the rules ... 
