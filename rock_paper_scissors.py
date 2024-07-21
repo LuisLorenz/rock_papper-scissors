@@ -219,7 +219,29 @@ Make a choice:
         text_lose = '\nSorry, the computer has beaten you!\n'
         flow_text_lose = flow_writing(text_lose)
 
-# initializing game 
+# game loop 
+
+continue_loop = None 
+
 game()
 
-# want to play again? - input
+while True:
+    
+    if continue_loop == 'y': 
+        game()
+
+    text_loop = 'Do you want to play again? yes (y)/ no (n)'
+    flow_text_loop = flow_writing(text_loop)
+    continue_loop = input()
+
+    if continue_loop == 'y': 
+        pass  
+
+    elif continue_loop == 'n':
+        text_closing_program = '''Okay :( ...
+The game has been closed.\n'''
+        flow_text_closing_program = flow_writing(text_closing_program)
+        break
+    else:
+        print('Your input was invalid. Please try again!')
+
